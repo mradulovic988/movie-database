@@ -7,6 +7,3 @@ Route::controller(MoviesController::class)->group(function () {
     Route::get('/', 'index')->name('movies.index');
     Route::get('/movies/{movie}', 'show')->name('movies.show');
 });
-
-// Route::view('/', 'index');
-// Route::view('/show', 'show');
