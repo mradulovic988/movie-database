@@ -32,7 +32,7 @@ class MoviesController extends Controller {
             $genres
         );
 
-        return view('index', $moviesViewModel);
+        return view('movies.index', $moviesViewModel);
     }
 
     public function show($id) {
@@ -42,6 +42,6 @@ class MoviesController extends Controller {
 
         $movieViewModel = new MovieViewModel($movie);
 
-        return view('show', $movieViewModel);
+        return view('movies.show', $movieViewModel);
     }
 }

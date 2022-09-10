@@ -22,7 +22,7 @@
                         </svg></a></li>
                 <li class="md:ml-16"><a class="hover:text-gray-300" href="{{ route('movies.index') }}">Movies</a></li>
                 <li class="md:ml-6"><a class="hover:text-gray-300" href="#">TV Shows</a></li>
-                <li class="md:ml-6"><a class="hover:text-gray-300" href="#">Actors</a></li>
+                <li class="md:ml-6"><a class="hover:text-gray-300" href="{{ route('actors.index') }}">Actors</a></li>
             </ul>
             <div class="flex flex-col md:flex-row items-center">
                 <livewire:search-dropdown />
@@ -37,6 +37,8 @@
     @yield('content')
 
     <livewire:scripts>
+
+    @yield('scripts')
 </body>
 
 </html>

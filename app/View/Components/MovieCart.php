@@ -4,8 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class MovieCart extends Component
-{
+class MovieCart extends Component {
 
     public $movie;
     /**
@@ -13,8 +12,7 @@ class MovieCart extends Component
      *
      * @return void
      */
-    public function __construct($movie)
-    {
+    public function __construct($movie) {
         $this->movie = $movie;
     }
 
@@ -23,8 +21,7 @@ class MovieCart extends Component
      *
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
-    public function render()
-    {
+    public function render() {
         return view('components.movie-cart');
     }
 }
