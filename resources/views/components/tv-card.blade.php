@@ -14,7 +14,7 @@
                 </g>
             </svg>
 
-            <span class="ml-1">{{ $tvshow['vote_average'] }}%</span>
+            <span class="ml-1">{{ $tvshow['vote_average'] }}</span>
             <span class="mx-2">|</span>
             <span>{{ $tvshow['first_air_date'] }}</span>
         </div>

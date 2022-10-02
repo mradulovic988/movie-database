@@ -39,7 +39,7 @@ class MoviesViewModel extends ViewModel {
 
             return collect($movie)->merge([
                 'poster_path' => 'https://image.tmdb.org/t/p/w500/' . $movie['poster_path'],
-                'vote_average' => $movie['vote_average'] * 10,
+                'vote_average' => $movie['vote_average'],
                 'release_date' => Carbon::parse($movie['release_date'])->format('M d, Y'),
                 'genres' => $genresFormatted,
             ])->only([

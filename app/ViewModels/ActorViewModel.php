@@ -36,15 +36,25 @@ class ActorViewModel extends ViewModel {
 
     public function knownForMovies() {
         $castMovies = collect($this->credits)->get('cast');
-        return collect($castMovies)->where('media_type', 'movie')->sortByDesc('popularity')->take(5)
-            ->map(function ($movie) {
-                return collect($movie)->merge([
-                    'poster_path' => $movie['poster_path']
-                        ? 'https://image.tmdb.org/t/p/w185' . $movie['poster_path']
-                        : 'https://via.placeholder.com/185x278',
-                    'title' => $movie['title'] ?? 'Untitled'
-                ]);
-            });
+        return collect($castMovies)->sortByDesc('popularity')->take(5)->map(function ($movie) {
+            if (isset($movie['title'])) {
+                $title = $movie['title'];
+            } elseif (isset($movie['name'])) {
+                $title = $movie['name'];
+            } else {
+                $title = 'Untitled';
+            }
+
+            return collect($movie)->merge([
+                'poster_path' => $movie['poster_path']
+                    ? 'https://image.tmdb.org/t/p/w185' . $movie['poster_path']
+                    : 'https://via.placeholder.com/185x278',
+                'title' => $title,
+                'linkToPage' => $movie['media_type'] === 'movie'
+                    ? route('movies.show', $movie['id'])
+                    : route('tv.show', $movie['id'])
+            ]);
+        });
     }
 
     public function credits() {
@@ -73,7 +83,7 @@ class ActorViewModel extends ViewModel {
                 'release_year' => Carbon::parse($releaseDate)->format('Y') ?? 'Future',
                 'title' => $title
             ])->only([
-                'release_date', 'release_year', 'title', 'character', 'linkToPage'
+                'release_date', 'release_year', 'title', 'character', 'name', 'linkToPage'
             ]);
         })->sortByDesc('release_date');
     }

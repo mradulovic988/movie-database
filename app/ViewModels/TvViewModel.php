@@ -38,12 +38,12 @@ class TvViewModel extends ViewModel {
 
             return collect($tvshows)->merge([
                 'poster_path' => 'https://image.tmdb.org/t/p/w500/' . $tvshows['poster_path'],
-                'vote_average' => $tvshows['vote_average'] * 10,
+                'vote_average' => $tvshows['vote_average'],
                 'first_air_date' => Carbon::parse($tvshows['first_air_date'])->format('M d, Y'),
                 'genres' => $genresFormatted,
             ])->only([
                 'poster_path', 'id', 'genre_ids', 'name', 'vote_average', 'overview', 'first_air_date', 'genres'
             ]);
-        })->dump();
+        });
     }
 }
