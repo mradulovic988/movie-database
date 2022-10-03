@@ -44,5 +44,5 @@ Fetching all movies, tv shows and actors from: [TMDB REST API.](https://www.them
    1. `composer require spatie/laravel-view-models`
 
 
-<small>Author: Marko Radulovic</small><br>
-<small>Email: mradulovic988@gmail.com</small>
+<sup><sub>Author: Marko Radulovic</sub></sup><br>
+<sup><sub>Email: [mradulovic988@gmail.com](mailto:mradulovic988@gmail.com)</sub></sup>
