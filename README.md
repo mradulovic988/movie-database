@@ -1,10 +1,48 @@
-# Movie Database
-Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+## Movie Database Application
 
-Donec rutrum congue leo eget malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Curabitur aliquet quam id dui posuere blandit.
+Fetching all movies, tv shows and actors from: [TMDB REST API.](https://www.themoviedb.org/documentation/api)
 
-Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ligula sed magna dictum porta.
+### Demo: Soon
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+### Used packages:
+1. [Livewire](https://laravel-livewire.com/)
+2. [View Models](https://github.com/spatie/laravel-view-models)
+3. [Tailwind CSS](https://tailwindcss.com/)
+4. [AlpineJS](https://alpinejs.dev/)
 
-Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Sed porttitor lectus nibh. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada.
+### To clone this project:
+1. Clone Github repo:
+   1. `git clone https://github.com/mradulovic988/movie-database.git`
+   2. `cd <into project>`
+2. Configure the database
+    1. Run the migration
+        1. `php artisan migrate`
+3. Set the API token in .env file with name `TMDB_TOKEN`
+   1. Create account on [TMDB](https://www.themoviedb.org/)
+   2. Set the [API Key](https://www.themoviedb.org/settings/api)
+4. Generate APP key
+    1. `php artisan key:generate`
+5. Install NPM 
+   1. `npm install && npm run dev`
+6. Install and configure TailwindCSS
+   1. `npm install -D tailwindcss postcss autoprefixer`
+   2. `npx tailwindcss init -p`
+   3. Configure template paths
+   4. Add directive to CSS:
+      1. `@tailwind base;`
+      2. `@tailwind components;`
+      3. `@tailwind utilities;`
+      4. `npm run dev`
+7. Install Livewire:
+   1. `composer require livewire/livewire`
+   2. Include the assets
+      1. `@livewireStyles`
+      2. `@livewireScripts`
+   3. Publish config file (optional)
+      1. `php artisan livewire:publish --config`
+8. Install Spatie View Models package
+   1. `composer require spatie/laravel-view-models`
+
+
+<small>Author: Marko Radulovic</small><br>
+<small>Email: mradulovic988@gmail.com</small>
