@@ -2,7 +2,7 @@
 
 Fetching all movies, tv shows and actors from: [TMDB REST API.](https://www.themoviedb.org/documentation/api)
 
-### Demo: Soon
+### Demo: <i>Soon</i>
 
 ### Used packages:
 1. [Livewire](https://laravel-livewire.com/)
