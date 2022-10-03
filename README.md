@@ -6,7 +6,7 @@ Fetching all movies, tv shows and actors from: [TMDB REST API.](https://www.them
 
 ### Used packages:
 1. [Livewire](https://laravel-livewire.com/)
-2. [View Models](https://github.com/spatie/laravel-view-models)
+2. [Spatie View Models](https://github.com/spatie/laravel-view-models)
 3. [Tailwind CSS](https://tailwindcss.com/)
 4. [AlpineJS](https://alpinejs.dev/)
 
