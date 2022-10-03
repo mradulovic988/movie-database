@@ -40,7 +40,10 @@ Fetching all movies, tv shows and actors from: [TMDB REST API.](https://www.them
       2. `@livewireScripts`
    3. Publish config file (optional)
       1. `php artisan livewire:publish --config`
-8. Install Spatie View Models package
+8. Install `AlpineJS`
+   1. Add tag to the `<head>`
+      1. `<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>`
+9. Install Spatie View Models package
    1. `composer require spatie/laravel-view-models`
 
 
